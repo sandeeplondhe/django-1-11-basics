@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+	</head>
+	<body>
+		<h1>{{ django|title }}</h1>
+		<p>This is {% verbatim %}{{num}}{% endverbatim %} coming through templates</p>
+		<p>
+			{% if num %}
+				Condition boolean - Random Number: {{num}}
+			{% endif %}
+		</p>
+		<p>
+			{% for some_item in some_list %}
+				{% if some_item|divisibleby:"2" %}
+					Even Number:
+				{% endif %}
+				{{some_item}}<br />
+			{% endfor %}
+		</p>
+	</body>
+</html>
